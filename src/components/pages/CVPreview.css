@@ -1,0 +1,80 @@
+/* Conteneur principal */
+.cv-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre principal */
+  .cv-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Liste des cartes */
+  .cv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Carte individuelle */
+  .cv-card {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid #0077b6;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .cv-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Titres des cartes */
+  .cv-card-title {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+  }
+  
+  /* Entreprise et date */
+  .cv-card-company {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .cv-card-company span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Description */
+  .cv-card-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .cv-container {
+      padding: 15px;
+    }
+  
+    .cv-card-title {
+      font-size: 1.3rem;
+    }
+  
+    .cv-card-company,
+    .cv-card-description {
+      font-size: 0.9rem;
+    }
+  }
+  
