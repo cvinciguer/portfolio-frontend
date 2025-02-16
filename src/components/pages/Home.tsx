@@ -4,31 +4,30 @@ import "./Home.css";
 export const Home: React.FC = () => {
   return (
     <div className="home-container">
-      {/* HEADER */}
+      {/* HEADER AVEC EFFET PARALLAXE */}
       <header className="hero">
         <div className="hero-text">
-          <h1>Clément, Ingénieur, développeur & amoureux de data</h1>
+          <h1>Clément, Ingénieur, Développeur & data lover</h1>
           <p>Alliant technologie, voyages et créativité pour repousser les limites</p>
           <a href="#contact" className="cta-button">Me contacter</a>
         </div>
       </header>
 
       {/* SECTION À PROPOS */}
-      <section className="about">
+      <section className="about fade-in">
         <div className="about-content">
-          <img src="/images/profile.jpg" alt="Clément" className="profile-pic" />
+          <img src="./src/assets/avatar.png" alt="Clément" className="profile-pic" />
           <div className="about-text">
             <h2>À propos</h2>
             <p>
-              Passionnée de technologie, de langues et de danse, je suis une ingénieure en télécommunication reconvertie en développeuse web & créatrice de contenu. 
-              Mon parcours atypique me permet de créer des projets innovants et de partager mes connaissances.
+              Passionnée de technologie, de langues et de danse, je suis un ingénieur en télécommunication reconverti en développeur web.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION COMPÉTENCES */}
-      <section className="skills">
+      {/* SECTION COMPÉTENCES AVEC ICÔNES */}
+      <section className="skills fade-in">
         <h2>Compétences</h2>
         <div className="skills-grid">
           <div className="skill-card">💻 Développement Web</div>
@@ -41,30 +40,37 @@ export const Home: React.FC = () => {
       </section>
 
       {/* SECTION EXPÉRIENCE */}
-      <section className="experience">
+      <section className="experience fade-in">
         <h2>Expériences</h2>
         <div className="timeline">
-          <div className="timeline-item">
-            <h3>Développeuse Web & Logiciel</h3>
+          <div className="timeline-item slide-in">
+            <h3>Développeur Web & Logiciel</h3>
             <p>Freelance - 2022 à Aujourd’hui</p>
           </div>
-          <div className="timeline-item">
-            <h3>Créatrice de Contenu</h3>
+          <div className="timeline-item slide-in">
+            <h3>Créateur de Contenu</h3>
             <p>Instagram & Réseaux sociaux - 2023 à Aujourd’hui</p>
           </div>
-          <div className="timeline-item">
-            <h3>Ingénieure Télécom</h3>
+          <div className="timeline-item slide-in">
+            <h3>Ingénieur Télécom</h3>
             <p>Ancienne activité - 2019 à 2022</p>
           </div>
         </div>
       </section>
 
-      {/* SECTION CONTACT */}
-      <section className="contact" id="contact">
+      {/* SECTION CONTACT INTERACTIF */}
+      <section className="contact fade-in" id="contact">
         <h2>Me contacter</h2>
-        <p>Envie de discuter d’un projet ou de collaborer ? N’hésitez pas à me contacter.</p>
-        <a href="mailto:email@example.com" className="cta-button">Envoyer un e-mail</a>
+        <p>Envie de discuter d’un projet ou de collaborer ? Remplis le formulaire ci-dessous.</p>
+        <form className="contact-form">
+          <input type="text" placeholder="Nom" required />
+          <input type="email" placeholder="E-mail" required />
+          <textarea placeholder="Votre message" required></textarea>
+          <button type="submit" className="cta-button">Envoyer</button>
+        </form>
       </section>
     </div>
   );
 };
+
+export default Home;
