@@ -1,51 +1,34 @@
-// Navbar.tsx
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+
+import "./Navbar.css";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav style={styles.navbar}>
-      <ul style={styles.navList}>
-        <li style={styles.navItem}>
-          <Link to="/" style={styles.navLink}>Accueil</Link>
+    <nav>
+      <Link to="/" className="title">
+        Not A Web Dev
+      </Link>
+      <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={menuOpen ? "open" : ""}>
+        <li>
+          <NavLink to="/about">A propos</NavLink>
         </li>
-        <li style={styles.navItem}>
-          <Link to="/about" style={styles.navLink}>À propos</Link>
+        <li>
+          <NavLink to="/services">Services</NavLink>
         </li>
-        <li style={styles.navItem}>
-          <Link to="/services" style={styles.navLink}>Services</Link>
-        </li>
-        <li style={styles.navItem}>
-          <Link to="/contact" style={styles.navLink}>Contact</Link>
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>
   );
-};
-
-const styles = {
-  navbar: {
-    backgroundColor: '#333',
-    padding: '10px 0',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  navList: {
-    listStyleType: 'none',
-    margin: 0,
-    padding: 0,
-    display: 'flex',
-  },
-  navItem: {
-    margin: '0 15px',
-  },
-  navLink: {
-    color: '#fff',
-    textDecoration: 'none',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    transition: 'color 0.3s ease',
-  },
 };
 
 export default Navbar;
