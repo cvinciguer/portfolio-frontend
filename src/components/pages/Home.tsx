@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Home.css";
 
 export const Home: React.FC = () => {
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
   return (
     <div className="home-container">
       {/* HEADER AVEC EFFET PARALLAXE */}
@@ -9,7 +11,11 @@ export const Home: React.FC = () => {
         <div className="hero-text">
           <h1>Clément, Ingénieur, Développeur & data lover</h1>
           <p>Alliant technologie, voyages et créativité pour repousser les limites</p>
-          <a href="#contact" className="cta-button">Me contacter</a>
+          <a className="cta-button" onClick={() => {
+            contactRef.current?.scrollIntoView({
+              behavior: "smooth"
+            })
+          }}>Me contacter</a>
         </div>
       </header>
 
@@ -59,7 +65,7 @@ export const Home: React.FC = () => {
       </section>
 
       {/* SECTION CONTACT INTERACTIF */}
-      <section className="contact fade-in" id="contact">
+      <section ref={contactRef} className="contact fade-in" id="contact">
         <h2>Me contacter</h2>
         <p>Envie de discuter d’un projet ou de collaborer ? Remplis le formulaire ci-dessous.</p>
         <form className="contact-form">
