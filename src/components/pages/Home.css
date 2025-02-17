@@ -91,7 +91,7 @@
 
 /* --- COMPÉTENCES --- */
 .skills {
-  background: #0077b6;
+  background: linear-gradient(-45deg, #6b006c, #270073);
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -140,7 +140,7 @@
 
 /* --- CONTACT --- */
 .contact {
-  background: #00a8cc;
+  background: linear-gradient(-45deg, #1d098d, #9d006e);
   color: white;
   text-align: center;
   padding: 60px 20px;
