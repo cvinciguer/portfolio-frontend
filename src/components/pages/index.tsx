@@ -2,4 +2,4 @@ export * from "./About";
 export * from "./Contact";
 export * from "./Home";
 export * from "./Services";
-export * from "./CVPreview";
+export * from "./Experience";
