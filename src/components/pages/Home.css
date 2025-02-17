@@ -19,6 +19,28 @@
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* --- Animation titre et sous titre --- */
+/**
+.hero-text .hero-title {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slide-in-left 1s ease-out forwards;
+}
+
+.hero-text .hero-subtitle {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slide-in-right 1s ease-out forwards;
+} **/
+
+/* Animation au survol */
+/**
+.hero-title:hover, .hero-subtitle:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease-out;
+} 
+**/
+
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 20px;
@@ -176,4 +198,20 @@
 .contact-form button:hover {
   background: #f0f0f0;
   transform: scale(1.05);
+}
+
+
+/* --- ANIMATION TITLE --- */
+@keyframes slide-in-left {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }

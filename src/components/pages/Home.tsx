@@ -1,16 +1,18 @@
 import React, { useRef } from "react";
 import "./Home.css";
+import { name, description, about, experiences } from '../../data';
 
 export const Home: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
+  const latestExperiences = experiences.slice(0, 3); // Prendre les 3 dernières expériences
 
   return (
     <div className="home-container">
       {/* HEADER AVEC EFFET PARALLAXE */}
       <header className="hero">
         <div className="hero-text">
-          <h1>Clément, Ingénieur, Développeur & data lover</h1>
-          <p>Alliant technologie, voyages et créativité pour repousser les limites</p>
+          <h1 className="hero-title">{name}</h1>
+          <h2 className="hero-subtitle">{description}</h2>
           <a className="cta-button" onClick={() => {
             contactRef.current?.scrollIntoView({
               behavior: "smooth"
@@ -26,7 +28,7 @@ export const Home: React.FC = () => {
           <div className="about-text">
             <h2>À propos</h2>
             <p>
-              Passionnée de technologie, de langues et de danse, je suis un ingénieur en télécommunication reconverti en développeur web.
+              {about}
             </p>
           </div>
         </div>
