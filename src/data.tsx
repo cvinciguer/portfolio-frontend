@@ -43,6 +43,8 @@ export const experiences = [
     }
 ];
 
+export const website_adress: string = "portfolio-frontend";
+
 export const name: string = "Clément VINCIGUERRA";
 export const description: string = "Ingénieur, Développeur & data lover";
 export const about: string = "Passionnée de technologie, de langues et de danse, je suis un ingénieur en télécommunication reconverti en développeur web. Alliant technologie, voyages et créativité pour repousser les limites";

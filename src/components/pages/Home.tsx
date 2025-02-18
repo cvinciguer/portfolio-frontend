@@ -1,10 +1,11 @@
 import React, { useRef } from "react";
 import "./Home.css";
-import { name, description, about, experiences } from '../../data';
+import { name, description, about, /*experiences*/ } from '../../data';
+import avatar from '../../assets/avatar.png';
 
 export const Home: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
-  const latestExperiences = experiences.slice(0, 3); // Prendre les 3 dernières expériences
+  //const latestExperiences = experiences.slice(0, 3); // Prendre les 3 dernières expériences
 
   return (
     <div className="home-container">
@@ -24,7 +25,7 @@ export const Home: React.FC = () => {
       {/* SECTION À PROPOS */}
       <section className="about fade-in">
         <div className="about-content">
-          <img src="./src/assets/avatar.png" alt="Clément" className="profile-pic" />
+          <img src={avatar} alt="Clément" className="profile-pic" />
           <div className="about-text">
             <h2>À propos</h2>
             <p>
