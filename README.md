@@ -23,8 +23,8 @@ Ce projet a pour objectif d’offrir une vitrine interactive et moderne, mettant
 - **React.js** - Composants modulaires et réactifs
 - **Vite.js** - Environnement de développement ultra rapide
 - **Framer Motion** - Gestion avancée des animations
-- **CSS Modules** / **Tailwind CSS** - Stylisation optimisée
-- **EmailJS** (optionnel) - Formulaire de contact avec envoi d’e-mails
+- **CSS Modules** - Stylisation optimisée
+- **EmailJS** - Formulaire de contact avec envoi d’e-mails
 
 ---
 
@@ -33,8 +33,8 @@ Ce projet a pour objectif d’offrir une vitrine interactive et moderne, mettant
 ### 📥 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/VOTRE-UTILISATEUR/portfolio.git
-cd portfolio
+git clone https://github.com/cvinciguer/portfolio-frontend.git
+cd portfolio-frontend
 ```
 
 ### 📦 2. Installer les dépendances
@@ -146,14 +146,9 @@ docker run -p 5173:5173 portfolio
 ## 📬 Contact
 
 - **Portfolio** : [https://cvinciguer.github.io/portfolio-frontend/](https://cvinciguer.github.io/portfolio-frontend/)
-- **Email** : clement.vinciguerra.ca@gmail.com
 - **GitHub** : [https://github.com/cvinciguer](https://github.com/cvinciguer)
 - **LinkedIn** : [https://www.linkedin.com/in/cl%C3%A9ment-v-5bb95b157/](https://www.linkedin.com/in/cl%C3%A9ment-v-5bb95b157/)
 
 ---
-
-## 📜 Licence
-
-Ce projet est sous licence **MIT**. Vous êtes libre de l’utiliser et de le modifier selon vos besoins.
 
 🚀 Développé avec passion par **Clément Vinciguerra** 🚀
