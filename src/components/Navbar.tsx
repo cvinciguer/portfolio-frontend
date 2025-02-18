@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   return (
     <nav>
       <Link to="/" className="title">
-        Not A Web Dev
+      💻 Not A Web Dev
       </Link>
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
