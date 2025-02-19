@@ -1,0 +1,44 @@
+/* --- COMPÉTENCES --- */
+.skills {
+    background: linear-gradient(-45deg, #6b006c, #270073);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .skillCard {
+    background: white;
+    color: #0077b6;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s;
+  }
+  
+  .skillCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* --- TITRE ET DESCRIPTION DES COMPÉTENCES --- */
+  .skillCardTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #6b006c;
+  }
+  
+  .skillCardDescription {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    max-width: 200px;
+    color: #333;
+  }
+  
