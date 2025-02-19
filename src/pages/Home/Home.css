@@ -7,7 +7,7 @@
 
 /* --- HEADER AVEC EFFET PARALLAXE --- */
 .hero {
-  background: url('/src/assets/header-bg.jpg') center/cover no-repeat fixed;
+  background: url('/src/assets/images/header-bg.jpg') center/cover no-repeat fixed;
   color: white;
   text-align: center;
   padding: 100px 20px;
