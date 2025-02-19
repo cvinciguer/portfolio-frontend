@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./Home.css";
-import { name, description, about, /*experiences*/ } from '../../data';
-import avatar from '../../assets/avatar.png';
+import { name, description, about, /*experiences*/ } from '../../data/data';
+import avatar from '../../assets/images/avatar.png';
 
 export const Home: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
