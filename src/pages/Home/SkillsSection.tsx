@@ -1,23 +1,16 @@
 import React from "react";
-import "./Home.css";
-
-const skills = [
-  "💻 Développement Web",
-  "🎨 UX/UI Design",
-  "📱 Applications Mobiles",
-  "🌎 Langues & Communication",
-  "📸 Création de Contenu",
-  "💃 Danse & Culture Latine"
-];
+import styles from "./SkillsSection.module.css";
+import { skills } from "../../data/data";
 
 export const SkillsSection: React.FC = () => {
   return (
-    <section className="skills fade-in">
+    <section className={styles.skills + " fade-in"}>
       <h2>Compétences</h2>
-      <div className="skills-grid">
+      <div className={styles.skillsGrid}>
         {skills.map((skill, index) => (
-          <div key={index} className="skill-card">
-            {skill}
+          <div key={index} className={styles.skillCard}>
+            <div>{skill.title}</div>
+            {/* <div className={styles.skillCardDescription}>{skill.description}</div> */}
           </div>
         ))}
       </div>

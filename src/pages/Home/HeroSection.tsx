@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import styles from "./HeroSection.module.css"; // Assurez-vous d'importer le module CSS
 import { name, description } from "../../data/data";
 
 interface HeroProps {
@@ -8,11 +8,11 @@ interface HeroProps {
 
 export const HeroSection: React.FC<HeroProps> = ({ contactRef }) => {
   return (
-    <header className="hero">
-      <div className="hero-text">
-        <h1 className="hero-title">{name}</h1>
-        <h2 className="hero-subtitle">{description}</h2>
-        <a className="cta-button" onClick={() => {
+    <header className={styles.hero}>
+      <div className={styles.heroText}>
+        <h1 className={styles.heroTitle}>{name}</h1>
+        <h2 className={styles.heroSubtitle}>{description}</h2>
+        <a className={styles.ctaButton} onClick={() => {
           contactRef.current?.scrollIntoView({ behavior: "smooth" });
         }}>
           Me contacter
