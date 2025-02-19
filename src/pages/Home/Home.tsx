@@ -4,6 +4,7 @@ import { HeroSection } from "./HeroSection";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";
 import { ExperienceSection } from "./ExperienceSection";
+import { ContactSection } from "./ContactSection";
 
 export const Home: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
@@ -23,16 +24,7 @@ export const Home: React.FC = () => {
       <ExperienceSection />
 
       {/* SECTION CONTACT INTERACTIF */}
-      <section ref={contactRef} className="contact fade-in" id="contact">
-        <h2>Me contacter</h2>
-        <p>Envie de discuter d’un projet ou de collaborer ? Remplis le formulaire ci-dessous.</p>
-        <form className="contact-form">
-          <input type="text" placeholder="Nom" required />
-          <input type="email" placeholder="E-mail" required />
-          <textarea placeholder="Votre message" required></textarea>
-          <button type="submit" className="cta-button">Envoyer</button>
-        </form>
-      </section>
+      <ContactSection contactRef={contactRef} />
     </div>
   );
 };

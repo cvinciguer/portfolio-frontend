@@ -3,7 +3,7 @@ import "./Home.css";
 import { ContactForm } from "../../components/ui/ContactForm";
 
 interface ContactProps {
-  contactRef: React.RefObject<HTMLDivElement>;
+  contactRef: React.RefObject<HTMLDivElement | null>;
 }
 
 export const ContactSection: React.FC<ContactProps> = ({ contactRef }) => {
