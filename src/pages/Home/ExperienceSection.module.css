@@ -1,0 +1,19 @@
+/* --- EXPÉRIENCES --- */
+.experience {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+.timelineItem {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+  }
