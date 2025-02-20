@@ -1,0 +1,27 @@
+/* --- À PROPOS --- */
+.aboutSection {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .aboutContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .aboutText {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+  
+  .profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }

@@ -1,8 +1,10 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import { Home, Services, Contact } from './components/pages';
-import Experience from './components/pages/Experience';
+import Experience from './pages/About/Experience';
+import { Contact } from './pages/Contact/Contact';
+import Home from './pages/Home/Home';
+import { Services } from './pages/Services/Services';
+import Navbar from './components/layout/Navbar/Navbar';
 
 function App() {
 

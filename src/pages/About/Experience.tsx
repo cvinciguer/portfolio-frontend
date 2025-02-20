@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBriefcase } from "react-icons/fa";
 import './Experience.css';
-import { experiences } from '../../data';
+import { experiences } from '../../data/data';
 
 const Experience: React.FC = () => {
     return (
