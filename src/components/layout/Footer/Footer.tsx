@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
 
         {/* Icône LinkedIn avec lien */}
         <a 
-          href="https://www.linkedin.com/in/ton-profile" // Remplace par ton vrai LinkedIn
+          href="https://www.linkedin.com/in/cl%C3%A9ment-v-5bb95b157/"
           target="_blank" 
           rel="noopener noreferrer"
           className={styles.linkedin}
