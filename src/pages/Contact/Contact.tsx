@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
+import { ContactSection } from "../Home/ContactSection";
 
 export const Contact: React.FC = () => {
-  return <h1>Contact</h1>;
+    const contactRef = useRef<HTMLDivElement | null>(null);
+  
+  return <ContactSection contactRef={contactRef} />;
 };
