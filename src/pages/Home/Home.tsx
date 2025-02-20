@@ -25,6 +25,8 @@ export const Home: React.FC = () => {
 
       {/* SECTION CONTACT INTERACTIF */}
       <ContactSection contactRef={contactRef} />
+
+      <div className="spacer"></div>
     </div>
   );
 };
