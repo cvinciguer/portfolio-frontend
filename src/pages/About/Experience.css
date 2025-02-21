@@ -103,17 +103,18 @@
 /* Responsive */
 @media (max-width: 768px) {
   .timeline-item {
-      width: 100%;
-      left: 0;
-      padding: 0;
-      justify-content: center;
+    width: 100%;
+    left: 0;
+    padding: 0;
+    justify-content: flex-end; /* Applique le style des .left */
   }
 
-  .timeline-item.left, .timeline-item.right {
-      justify-content: center;
+  .timeline-item.right {
+    left: 0; /* Supprime le décalage */
+    padding: 0;
   }
 
   .timeline-line {
-      left: 20px;
+    left: 20px; /* Ajuste la ligne verticale pour rester à gauche */
   }
 }
