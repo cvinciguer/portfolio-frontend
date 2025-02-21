@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 
 export const Services: React.FC = () => {
+
+    // Remonte en haut au chargement
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+  
   return (
     <section className="services">
       <div className="container">

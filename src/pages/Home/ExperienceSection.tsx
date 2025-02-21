@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./ExperienceSection.module.css";
 import { experiences } from "../../data/data";
 
-const latestExperiences = experiences.slice(0, 3); // Prendre les 3 dernières expériences
+const latestExperiences = experiences.slice(0, 3).reverse(); // Prendre les 3 dernières expériences
 
 export const ExperienceSection: React.FC = () => {
   return (
