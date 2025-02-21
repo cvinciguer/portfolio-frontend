@@ -18,10 +18,10 @@ const Navbar: React.FC = () => {
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <NavLink to="/about">A propos</NavLink>
+          <NavLink to="/about">Mon expérience</NavLink>
         </li>
         <li>
-          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/services">Mes services</NavLink>
         </li>
         <li>
           <NavLink to="/contact">Contact</NavLink>
