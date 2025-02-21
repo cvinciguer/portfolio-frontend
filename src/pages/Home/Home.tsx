@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Home.css";
 import { HeroSection } from "./HeroSection";
 import { AboutSection } from "./AboutSection";
@@ -8,6 +8,11 @@ import { ContactSection } from "./ContactSection";
 
 export const Home: React.FC = () => {
   const contactRef = useRef<HTMLDivElement | null>(null);
+
+    // Remonte en haut au chargement
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   
   return (
     <div className="home-container">

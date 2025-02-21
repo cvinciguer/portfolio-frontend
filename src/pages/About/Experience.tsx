@@ -4,9 +4,12 @@ import './Experience.css';
 import { experiences } from '../../data/data';
 
 const Experience: React.FC = () => {
+    
+    // Remonte en haut au chargement
     useEffect(() => {
-        window.scrollTo(0, 0); // Remonte en haut au chargement
+        window.scrollTo(0, 0);
       }, []);
+      
     return (
         <section className="experience-section">
             <h2 className="section-title">Expérience</h2>
