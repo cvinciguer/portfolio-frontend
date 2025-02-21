@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaBriefcase } from "react-icons/fa";
 import './Experience.css';
 import { experiences } from '../../data/data';
 
 const Experience: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0); // Remonte en haut au chargement
+      }, []);
     return (
         <section className="experience-section">
             <h2 className="section-title">Expérience</h2>
