@@ -1,27 +1,36 @@
 /* --- À PROPOS --- */
 .aboutSection {
-    background: white;
+    background: var(--card-bg-light);
     padding: 60px 20px;
     text-align: center;
-  }
-  
-  .aboutContent {
+}
+
+.aboutContent {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
-  }
+}
 
-  .aboutText {
+.aboutText {
     max-width: 800px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-dark); /* Remplace #181a1b */
 }
-  
-  .profilePic {
+
+.profilePic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .aboutSection {
+    background: var(--card-bg-light);
   }
+  .aboutText {
+    color: var(--text-medium);
+  }
+}

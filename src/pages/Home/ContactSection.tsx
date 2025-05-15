@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./ContactSection.module.css";
-import "../../assets/style/animations.css"
 import { ContactForm } from "../../components/ui/ContactForm";
 import { useI18n } from "../../utils/i18n";
 

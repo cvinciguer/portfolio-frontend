@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaBriefcase } from "react-icons/fa";
-import './Experience.css';
+import styles from "./Experience.module.css";
 import { useI18n } from '../../utils/i18n';
 
 const Experience: React.FC = () => {
@@ -10,26 +10,26 @@ const Experience: React.FC = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-      
+    }, []);
+
     return (
-        <section className="experience-section">
-            <h2 className="section-title">{t("experienceTitle") || "Expérience"}</h2>
-            <div className="timeline">
+        <section className={styles.experienceSection}>
+            <h2 className={styles.sectionTitle}>{t("experienceTitle") || "Expérience"}</h2>
+            <div className={styles.timeline}>
                 {experiences.map((exp, index) => (
-                    <div className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`} key={index}>
-                        <div className="experience-card">
-                            <FaBriefcase className="experience-icon" />
-                            <div className="experience-content">
+                    <div className={`${styles.timelineItem} ${index % 2 === 0 ? styles.left : styles.right}`} key={index}>
+                        <div className={styles.experienceCard}>
+                            <FaBriefcase className={styles.experienceIcon} />
+                            <div className={styles.experienceContent}>
                                 <h3>{exp.date}</h3>
                                 <h4>{exp.title}</h4>
-                                <p className="company">{exp.company}</p>
+                                <p className={styles.company}>{exp.company}</p>
                                 <p>{exp.description}</p>
                             </div>
                         </div>
                     </div>
                 ))}
-                <div className="timeline-line"></div>
+                <div className={styles.timelineLine}></div>
             </div>
         </section>
     );

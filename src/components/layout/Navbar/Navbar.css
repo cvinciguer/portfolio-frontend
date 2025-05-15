@@ -11,6 +11,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    position: relative;
 }
 
 nav .title {
@@ -92,6 +93,34 @@ nav .menu span {
   background: #fff;
 }
 
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  position: static;
+}
+
+.theme-switch {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.2s;
+  outline: none;
+  padding: 0 0.5rem;
+  vertical-align: middle;
+  /* Remove absolute positioning */
+  position: static;
+  right: unset;
+  top: unset;
+  transform: none;
+}
+.theme-switch:hover {
+  transform: scale(1.2) rotate(-10deg);
+}
+
 @media (max-width: 480px) {
     nav .menu {
         display: flex;
@@ -120,5 +149,12 @@ nav .menu span {
 
     nav ul li a {
         margin: 0.2rem 0.5rem;
+    }
+
+    .navbar-actions {
+      margin-left: 0;
+      margin-top: 0.5rem;
+      justify-content: center;
+      width: 100%;
     }
 }

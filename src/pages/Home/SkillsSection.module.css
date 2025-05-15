@@ -1,44 +1,61 @@
 /* --- COMPÉTENCES --- */
 .skills {
     background: linear-gradient(-45deg, #6b006c, #270073);
-    color: white;
+    color: var(--text-light);
     padding: 60px 20px;
     text-align: center;
-  }
-  
-  .skillsGrid {
+}
+
+.skillsGrid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-  }
-  
-  .skillCard {
-    background: white;
-    color: #0077b6;
+}
+
+.skillCard {
+    background: var(--card-bg-light);
+    color: var(--primary);
     padding: 15px 25px;
     border-radius: 8px;
     font-weight: bold;
-    transition: transform 0.3s;
-  }
-  
-  .skillCard:hover {
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.skillCard:hover {
     transform: translateY(-5px);
-  }
-  
-  /* --- TITRE ET DESCRIPTION DES COMPÉTENCES --- */
-  .skillCardTitle {
+}
+
+/* --- TITRE ET DESCRIPTION DES COMPÉTENCES --- */
+.skillCardTitle {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
     color: #6b006c;
-  }
-  
-  .skillCardDescription {
+}
+
+.skillCardDescription {
     font-size: 0.8rem;
     line-height: 1.5;
     max-width: 200px;
-    color: #333;
+    color: var(--text-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .skills {
+    background: linear-gradient(-45deg, #1a0033, #0d0026);
+    color: var(--text-light);
   }
-  
+  .skillCard {
+    background: var(--card-bg-dark);
+    color: var(--text-light);
+    box-shadow: var(--card-shadow-dark);
+  }
+  .skillCardTitle {
+    color: #b266ff;
+  }
+  .skillCardDescription {
+    color: var(--text-light);
+  }
+}
