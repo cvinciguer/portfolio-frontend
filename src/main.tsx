@@ -7,8 +7,7 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router'
 import { LanguageProvider } from './utils/i18n'
 
-// Utilise uniquement la variable d'environnement
-const website_adress = import.meta.env.VITE_WEBSITE_ADRESS
+const website_adress = import.meta.env.PROD ? "/portfolio-frontend" : "/";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
