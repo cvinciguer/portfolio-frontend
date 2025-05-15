@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./AboutSection.module.css";
-import avatar from "../../assets/images/avatar.png";
+import avatar from "../../assets/images/headshot.png";
 import { useI18n } from "../../utils/i18n";
 
 export const AboutSection: React.FC = () => {
