@@ -3,12 +3,12 @@ import styles from "./ContactForm.module.css";
 import { useI18n } from "../../utils/i18n";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "../../config";
+import { toast } from "react-toastify";
 
 export const ContactForm: React.FC = () => {
   const { t } = useI18n();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<null | "success" | "error">(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,7 +17,6 @@ export const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setResult(null);
     try {
       await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -29,10 +28,10 @@ export const ContactForm: React.FC = () => {
         },
         EMAILJS_PUBLIC_KEY
       );
-      setResult("success");
+      toast.success(t("form.success") || "Message envoyé avec succès !");
       setForm({ name: "", email: "", message: "" });
     } catch (err) {
-      setResult("error");
+      toast.error(t("form.error") || "Erreur lors de l'envoi. Veuillez réessayer.");
     } finally {
       setLoading(false);
     }
@@ -69,16 +68,6 @@ export const ContactForm: React.FC = () => {
       <button type="submit" className={styles.button} disabled={loading}>
         {loading ? "..." : t("form.send") || "Envoyer"}
       </button>
-      {result === "success" && (
-        <div style={{ color: "green", marginTop: 8 }}>
-          {t("form.success") || "Message envoyé avec succès !"}
-        </div>
-      )}
-      {result === "error" && (
-        <div style={{ color: "red", marginTop: 8 }}>
-          {t("form.error") || "Erreur lors de l'envoi. Veuillez réessayer."}
-        </div>
-      )}
     </form>
   );
 };
