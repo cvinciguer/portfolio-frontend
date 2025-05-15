@@ -1,0 +1,126 @@
+{
+  "name": "Clément VINCIGUERRA",
+  "description": "Ingeniero, Desarrollador y amante de los datos",
+  "about": "Ingeniero en telecomunicaciones de formación, especializado en redes, actualmente trabajo como desarrollador web. Apasionado por la tecnología, la inteligencia artificial y la optimización de procesos, combino mi experiencia técnica con creatividad, aprovechando mis experiencias internacionales para superar constantemente los límites de la innovación.",
+  "skills": [
+    {
+      "title": "💻 Desarrollo Web Full-Stack",
+      "description": "Experiencia en desarrollo front-end, back-end y creación de APIs. Dominio de tecnologías modernas como React, Node.js y SQL."
+    },
+    {
+      "title": "🎨 Diseño UX/UI",
+      "description": "Diseño de interfaces de usuario intuitivas, prototipado, pruebas de interfaz y optimización de la experiencia del usuario mediante metodologías centradas en el usuario."
+    },
+    {
+      "title": "📱 Desarrollo de Aplicaciones Móviles",
+      "description": "Desarrollo de aplicaciones móviles nativas para iOS y Android, así como soluciones multiplataforma con React Native y Flutter."
+    },
+    {
+      "title": "🌎 Gestión Multilingüe y Comunicación Técnica",
+      "description": "Redacción técnica, gestión multilingüe y traducción de documentos técnicos para una comunicación eficaz en entornos internacionales."
+    },
+    {
+      "title": "📸 Creación de Contenidos Digitales",
+      "description": "Producción de contenido visual y multimedia, incluyendo fotografía, vídeo y redacción técnica para reforzar la comunicación y el compromiso."
+    },
+    {
+      "title": "💃 Análisis de Cultura Digital e Interfaces Sociales",
+      "description": "Análisis de tendencias culturales digitales, desarrollo de interfaces sociales interactivas e integración de nuevas tecnologías en contextos culturales."
+    }
+  ],
+  "experiences": [
+    {
+      "date": "Marzo 2024 - Septiembre 2024",
+      "title": "Desarrollador Full-Stack Freelance",
+      "company": "Freelance - Cali, Colombia",
+      "description": "Desarrollo de una aplicación educativa, optimización de sitios de comercio electrónico y análisis de datos para el sector de la restauración."
+    },
+    {
+      "date": "Diciembre 2023 - Marzo 2024",
+      "title": "Responsable de Informática",
+      "company": "Bar Restaurante - Quintana Roo, México",
+      "description": "Implementación y gestión de la red informática, desarrollo de un sistema de pago diferido seguro y gestión de eventos."
+    },
+    {
+      "date": "Diciembre 2021 - Febrero 2023",
+      "title": "Ingeniero de Desarrollo",
+      "company": "Sopra Steria - Toulouse, Francia",
+      "description": "Desarrollo de una aplicación de medición satelital, diseño de una herramienta web financiera y gestión de datos con Azure SQL."
+    },
+    {
+      "date": "Enero 2021 - Agosto 2021",
+      "title": "Ingeniero de Proyecto - Desarrollo",
+      "company": "Orange Innovation - Meylan, Francia",
+      "description": "Desarrollo de una arquitectura de recopilación de datos médico-sociales con Android y Django, integrando restricciones de consentimiento."
+    },
+    {
+      "date": "Abril 2020 - Septiembre 2020",
+      "title": "Ingeniero de Data Mining - IA",
+      "company": "Free Mobile - Montpellier, Francia",
+      "description": "Diseño de algoritmos de detección de fraude con TensorFlow y análisis de datos en tiempo real en C."
+    },
+    {
+      "date": "Mayo 2018 - Septiembre 2018",
+      "title": "Técnico de Mantenimiento Químico",
+      "company": "Air Liquide - Crolles, Francia",
+      "description": "Mantenimiento preventivo y correctivo de equipos químicos para STMicroelectronics."
+    },
+    {
+      "date": "Noviembre 2017 - Febrero 2018",
+      "title": "Técnico en Metrología y Calificación de Materiales",
+      "company": "Danone (Evian) - Evian-les-Bains, Francia",
+      "description": "Pruebas de tracción y compresión en botellas para garantizar la conformidad y durabilidad de los envases."
+    }
+  ],
+  "contactCta": "Contáctame",
+  "aboutTitle": "Sobre mí",
+  "skillsTitle": "Habilidades",
+  "latestExperiencesTitle": "Últimas experiencias",
+  "seeMore": "Ver más",
+  "experienceTitle": "Experiencia",
+  "servicesTitle": "Mis Servicios",
+  "servicesSubtitle": "Ofrezco servicios personalizados adaptados a tus necesidades. ¡Contáctame para hablar de tu proyecto! 🚀",
+  "servicesContactText": "¿Interesado en alguno de estos servicios? ¡Hablemos de tu proyecto!",
+  "services": [
+    {
+      "title": "Desarrollo Web",
+      "description": "Creación de sitios modernos, optimizados y responsivos con React.js, Next.js y más."
+    },
+    {
+      "title": "Optimización SEO",
+      "description": "Mejora del posicionamiento natural (SEO) para aumentar tu visibilidad en Google."
+    },
+    {
+      "title": "Integración & UI/UX",
+      "description": "Diseño intuitivo e interfaz cuidada para ofrecer la mejor experiencia de usuario."
+    },
+    {
+      "title": "Automatización & Scripts",
+      "description": "Desarrollo de scripts y herramientas automatizadas para optimizar tu flujo de trabajo."
+    },
+    {
+      "title": "Consultoría Técnica",
+      "description": "Asesoramiento técnico y acompañamiento para tus proyectos web y de software."
+    },
+    {
+      "title": "Despliegue & Hosting",
+      "description": "Implementación y gestión de servidores, cloud y servicios de alojamiento."
+    }
+  ],
+  "contactTitle": "Contáctame",
+  "contactText": "¿Quieres hablar de un proyecto o colaborar? Rellena el formulario abajo.",
+  "form": {
+    "name": "Nombre",
+    "email": "E-mail",
+    "message": "Tu mensaje",
+    "send": "Enviar"
+  },
+  "nav": {
+    "experience": "Mi experiencia",
+    "services": "Mis servicios",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© {{year}} Clément Vinciguerra. Todos los derechos reservados."
+  }
+}

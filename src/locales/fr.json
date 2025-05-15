@@ -1,0 +1,126 @@
+{
+  "name": "Clément VINCIGUERRA",
+  "description": "Ingénieur, Développeur & data lover",
+  "about": "Ingénieur en télécommunications de formation, spécialisé dans le réseau, j'exerce aujourd'hui la profession de développeur web. Passionné par la technologie, l'intelligence artificielle et l'optimisation des processus, j'allie mon expertise technique à ma créativité, tout en tirant parti de mes expériences internationales pour repousser constamment les limites de l'innovation.",
+  "skills": [
+    {
+      "title": "💻 Développement Web Full-Stack",
+      "description": "Expertise en développement front-end, back-end et création d'APIs. Maîtrise des technologies modernes telles que React, Node.js, et SQL."
+    },
+    {
+      "title": "🎨 Conception UX/UI",
+      "description": "Conception d'interfaces utilisateur intuitives, prototypage, tests d'interface, et optimisation de l'expérience utilisateur à travers des méthodologies centrées sur l'utilisateur."
+    },
+    {
+      "title": "📱 Développement d'Applications Mobiles",
+      "description": "Développement d'applications mobiles natives pour iOS et Android, ainsi que des solutions cross-platform avec React Native et Flutter."
+    },
+    {
+      "title": "🌎 Gestion Multilingue et Communication Technique",
+      "description": "Compétence en rédaction technique, gestion multilingue, et traduction de documents techniques pour une communication efficace dans des environnements internationaux."
+    },
+    {
+      "title": "📸 Création de Contenus Numériques",
+      "description": "Production de contenu visuel et multimédia, incluant la photographie, la vidéo, et la rédaction technique pour renforcer la communication et l'engagement."
+    },
+    {
+      "title": "💃 Analyse de Culture Numérique et Interfaces Sociales",
+      "description": "Analyse des tendances culturelles numériques, développement d'interfaces sociales interactives et intégration des nouvelles technologies dans des contextes culturels."
+    }
+  ],
+  "experiences": [
+    {
+      "date": "Mars 2024 - Septembre 2024",
+      "title": "Développeur Full-Stack Freelance",
+      "company": "Freelance - Cali, Colombie",
+      "description": "Développement d'une application éducative, optimisation de sites e-commerce et analyse de données pour le secteur de la restauration."
+    },
+    {
+      "date": "Décembre 2023 - Mars 2024",
+      "title": "Responsable Informatique",
+      "company": "Bar Restaurant - Quintana Roo, Mexique",
+      "description": "Mise en place et gestion du réseau informatique, développement d'un système de paiement différé sécurisé et gestion d'événements."
+    },
+    {
+      "date": "Décembre 2021 - Février 2023",
+      "title": "Ingénieur Développement",
+      "company": "Sopra Steria - Toulouse, France",
+      "description": "Développement d'une application de mesures satellites, conception d'un outil web financier et gestion de données avec Azure SQL."
+    },
+    {
+      "date": "Janvier 2021 - Août 2021",
+      "title": "Ingénieur Chargé de Projet - Développement",
+      "company": "Orange Innovation - Meylan, France",
+      "description": "Développement d’une architecture de collecte de données médico-sociales avec Android et Django, intégrant les contraintes de consentement."
+    },
+    {
+      "date": "Avril 2020 - Septembre 2020",
+      "title": "Ingénieur Data Mining - IA",
+      "company": "Free Mobile - Montpellier, France",
+      "description": "Conception d'algorithmes de détection de fraude avec TensorFlow et analyse de données en temps réel en C."
+    },
+    {
+      "date": "Mai 2018 - Septembre 2018",
+      "title": "Technicien de Maintenance Chimie",
+      "company": "Air Liquide - Crolles, France",
+      "description": "Maintenance préventive et curative des équipements chimiques pour STMicroelectronics."
+    },
+    {
+      "date": "Novembre 2017 - Février 2018",
+      "title": "Technicien en Métrologie et Qualification des Matériaux",
+      "company": "Danone (Evian) - Evian-les-Bains, France",
+      "description": "Tests de traction et compression sur les bouteilles pour garantir la conformité et la durabilité des packagings."
+    }
+  ],
+  "contactCta": "Me contacter",
+  "aboutTitle": "À propos",
+  "skillsTitle": "Compétences",
+  "latestExperiencesTitle": "Dernières expériences",
+  "seeMore": "Voir plus",
+  "experienceTitle": "Expérience",
+  "servicesTitle": "Mes Services",
+  "servicesSubtitle": "Je propose des services personnalisés adaptés à vos besoins. Contactez-moi pour discuter de votre projet ! 🚀",
+  "servicesContactText": "Intéressé par un de ces services ? Discutons ensemble de votre projet !",
+  "services": [
+    {
+      "title": "Développement Web",
+      "description": "Création de sites modernes, optimisés et responsives avec React.js, Next.js, et plus encore."
+    },
+    {
+      "title": "Optimisation SEO",
+      "description": "Amélioration du référencement naturel (SEO) pour booster votre visibilité sur Google."
+    },
+    {
+      "title": "Intégration & UI/UX",
+      "description": "Design intuitif et interface soignée pour offrir la meilleure expérience utilisateur."
+    },
+    {
+      "title": "Automatisation & Scripts",
+      "description": "Développement de scripts et outils automatisés pour optimiser votre workflow."
+    },
+    {
+      "title": "Consulting Tech",
+      "description": "Conseils techniques et accompagnement pour vos projets web et logiciels."
+    },
+    {
+      "title": "Déploiement & Hébergement",
+      "description": "Mise en place et gestion de serveurs, cloud, et services d’hébergement."
+    }
+  ],
+  "contactTitle": "Me contacter",
+  "contactText": "Envie de discuter d’un projet ou de collaborer ? Remplis le formulaire ci-dessous.",
+  "form": {
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Votre message",
+    "send": "Envoyer"
+  },
+  "nav": {
+    "experience": "Mon expérience",
+    "services": "Mes services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "© {{year}} Clément Vinciguerra. Tous droits réservés."
+  }
+}

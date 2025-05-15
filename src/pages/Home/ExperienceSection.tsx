@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from "./ExperienceSection.module.css";
-import { experiences } from "../../data/data";
-
-const latestExperiences = experiences.slice(0, 3).reverse(); // Prendre les 3 dernières expériences
+import { useI18n } from "../../utils/i18n";
 
 export const ExperienceSection: React.FC = () => {
+  const { t } = useI18n();
+  // @ts-ignore
+  const experiences = t("experiences") as any[] || [];
+  const latestExperiences = experiences.slice(0, 3).reverse();
+
   return (
     <section className={styles.experiences}>
-      <h2 className={styles.title}>Dernières expériences</h2>
+      <h2 className={styles.title}>{t("latestExperiencesTitle") || "Dernières expériences"}</h2>
       <div className={styles.cards}>
         {latestExperiences.map((exp, index) => (
           <div key={index} className={styles.card}>
@@ -18,7 +21,7 @@ export const ExperienceSection: React.FC = () => {
       </div>
       <div className={styles.seeMore}>
         <Link to="/about">
-          <button>Voir plus</button>
+          <button>{t("seeMore") || "Voir plus"}</button>
         </Link>
       </div>
     </section>
