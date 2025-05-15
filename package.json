@@ -13,6 +13,7 @@
     "deploy": "cp dist/index.html dist/404.html && gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/react-router-dom": "^5.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
