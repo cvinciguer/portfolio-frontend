@@ -6,6 +6,7 @@ export const WEBSITE_ADRESS = "/portfolio-frontend";
 // export const CONTACT_EMAIL = "contact@votredomaine.com";
 // export const SITE_TITLE = "Not A Web Dev";
 // export const GITHUB_URL = "https://github.com/cvinciguer";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/clement-v2/";
 
 // variables d'environnement utiles eventuelles:
 // export const API_URL = import.meta.env.VITE_API_URL || "https://api.example.com";

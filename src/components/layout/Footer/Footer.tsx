@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import { FaLinkedin } from "react-icons/fa";
 import { useI18n } from "../../../utils/i18n";
+import { LINKEDIN_URL } from "../../../config";
 
 export const Footer: React.FC = () => {
   const { t } = useI18n();
@@ -14,7 +15,7 @@ export const Footer: React.FC = () => {
             .replace("{{year}}", String(new Date().getFullYear()))}
         </p>
         <a
-          href="https://www.linkedin.com/in/cl%C3%A9ment-v-5bb95b157/"
+          href={LINKEDIN_URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.linkedin}
