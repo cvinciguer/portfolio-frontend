@@ -112,6 +112,7 @@
   "form": {
     "name": "Name",
     "email": "E-mail",
+    "subject": "Subject",
     "message": "Your message",
     "send": "Send",
     "success": "Message sent successfully!",

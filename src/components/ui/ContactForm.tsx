@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 export const ContactForm: React.FC = () => {
   const { t } = useI18n();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,12 +24,13 @@ export const ContactForm: React.FC = () => {
         {
           from_name: form.name,
           from_email: form.email,
+          subject: form.subject,
           message: form.message,
         },
         EMAILJS_PUBLIC_KEY
       );
       toast.success(t("form.success") || "Message envoyé avec succès !");
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {
       toast.error(t("form.error") || "Erreur lors de l'envoi. Veuillez réessayer.");
     } finally {
@@ -54,6 +55,15 @@ export const ContactForm: React.FC = () => {
         name="email"
         placeholder={t("form.email") || "E-mail"}
         value={form.email}
+        onChange={handleChange}
+        required
+      />
+      <input
+        className={styles.input}
+        type="text"
+        name="subject"
+        placeholder={t("form.subject") || "Objet"}
+        value={form.subject}
         onChange={handleChange}
         required
       />
