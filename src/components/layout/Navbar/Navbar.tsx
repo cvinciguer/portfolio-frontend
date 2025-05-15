@@ -31,12 +31,12 @@ const Navbar: React.FC = () => {
           <select
             value={lang}
             onChange={e => setLang(e.target.value as any)}
-            style={{ marginLeft: 8, borderRadius: 4 }}
             aria-label="Langue"
+            className="navbar-lang-select"
           >
-            <option value="fr">FR</option>
-            <option value="en">EN</option>
-            <option value="es">ES</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="es">🇪🇸 ES</option>
           </select>
         </li>
       </ul>
