@@ -112,8 +112,11 @@
   "form": {
     "name": "Name",
     "email": "E-mail",
+    "subject": "Subject",
     "message": "Your message",
-    "send": "Send"
+    "send": "Send",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
   },
   "nav": {
     "experience": "My experience",

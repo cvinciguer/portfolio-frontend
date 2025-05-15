@@ -10,3 +10,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/clement-v2/";
 
 // variables d'environnement utiles eventuelles:
 // export const API_URL = import.meta.env.VITE_API_URL || "https://api.example.com";
+
+export const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+export const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+export const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
