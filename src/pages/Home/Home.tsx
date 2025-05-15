@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import "./Home.css";
 import { HeroSection } from "./HeroSection";
 import { AboutSection } from "./AboutSection";
 import { SkillsSection } from "./SkillsSection";

@@ -1,0 +1,99 @@
+.services {
+    padding: 4rem 2rem;
+    background-color: var(--background-light);
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.servicesTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.servicesSubtitle {
+    font-size: 1.2rem;
+    color: var(--text-medium);
+    margin-bottom: 2.5rem;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.serviceCard {
+    background: var(--card-bg-light);
+    color: var(--text-dark);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #222;
+}
+
+.serviceCard p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contactSection {
+    margin-top: 3rem;
+}
+
+.contactSection p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: var(--primary-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .services {
+    background-color: var(--background-dark);
+  }
+  .serviceCard {
+    background: var(--card-bg-light);
+    color: var(--text-dark);
+    box-shadow: var(--card-shadow-dark);
+  }
+  .serviceCard h2 {
+    color: var(--text-light);
+  }
+  .serviceCard p {
+    color: var(--text-medium);
+  }
+  .contactSection p {
+    color: var(--text-medium);
+  }
+}
