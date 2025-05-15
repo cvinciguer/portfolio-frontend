@@ -1,11 +1,15 @@
 import React from "react";
 import styles from "./SkillsSection.module.css";
-import { skills } from "../../data/data";
+import { useI18n } from "../../utils/i18n";
 
 export const SkillsSection: React.FC = () => {
+  const { t, lang } = useI18n();
+  // @ts-ignore
+  const skills = t("skills") as { title: string; description: string }[] || [];
+
   return (
     <section className={styles.skills + " fade-in"}>
-      <h2>Compétences</h2>
+      <h2>{t("skillsTitle") || "Compétences"}</h2>
       <div className={styles.skillsGrid}>
         {skills.map((skill, index) => (
           <div key={index} className={styles.skillCard}>
