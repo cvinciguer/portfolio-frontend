@@ -1,0 +1,98 @@
+:root {
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+
+  --background-light: #fafdff;
+  --background-dark: #242424;
+
+  --text-dark: #181a1b;
+  --text-medium: #444c56;
+  --text-light: #fff;
+
+  --link: #2a4cff;
+  --link-hover: #1a2cff;
+  --link-hover-light: #3a5cff;
+
+  --button-bg: #e9eef6;
+  --button-bg-light: #f5faff;
+
+  --card-bg-light: #f8fbff;
+  --card-bg-dark: #232336;
+
+  --card-shadow-light: 0 2px 8px rgba(0,0,0,0.04);
+  --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.25);
+
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --hero-text-on-dark: #fff;
+}
+
+/* Thème sombre automatique (préférence système) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-light: #242424;
+    --background-dark: #181824;
+
+    --text-dark: #f8f9fa;
+    --text-medium: #d1d5db;
+    --text-light: #fff;
+
+    --link: #8ab4f8;
+    --link-hover: #a3c9fa;
+    --link-hover-light: #b3d1ff;
+
+    --button-bg: #232336;
+    --button-bg-light: #232336;
+
+    --card-bg-light: #232336;
+    --card-bg-dark: #181824;
+
+    --card-shadow-light: 0 4px 10px rgba(0,0,0,0.25);
+    --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.45);
+  }
+}
+
+/* Thème clair forcé */
+html[data-theme="light"] {
+  --background-light: #fafdff;
+  --background-dark: #242424;
+
+  --text-dark: #181a1b;
+  --text-medium: #444c56;
+  --text-light: #fff;
+
+  --link: #2a4cff;
+  --link-hover: #1a2cff;
+  --link-hover-light: #3a5cff;
+
+  --button-bg: #e9eef6;
+  --button-bg-light: #f5faff;
+
+  --card-bg-light: #f8fbff;
+  --card-bg-dark: #232336;
+
+  --card-shadow-light: 0 2px 8px rgba(0,0,0,0.04);
+  --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Thème sombre forcé */
+html[data-theme="dark"] {
+  --background-light: #242424;
+  --background-dark: #181824;
+
+  --text-dark: #f8f9fa;
+  --text-medium: #d1d5db;
+  --text-light: #fff;
+
+  --link: #8ab4f8;
+  --link-hover: #a3c9fa;
+  --link-hover-light: #b3d1ff;
+
+  --button-bg: #232336;
+  --button-bg-light: #232336;
+
+  --card-bg-light: #232336;
+  --card-bg-dark: #181824;
+
+  --card-shadow-light: 0 4px 10px rgba(0,0,0,0.25);
+  --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.45);
+}
