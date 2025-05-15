@@ -23,7 +23,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
-      <ToastContainer position="top-center" autoClose={4000} />
+      <ToastContainer position="bottom-right" autoClose={4000} pauseOnHover={false} />
     </div>
   )
 }
