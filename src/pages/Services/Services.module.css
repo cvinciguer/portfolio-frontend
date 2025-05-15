@@ -1,6 +1,7 @@
 .services {
     padding: 4rem 2rem;
     background-color: var(--background-light);
+    color: var(--text-dark);
     text-align: center;
 }
 
@@ -34,17 +35,22 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: var(--card-shadow-light);
+    border: 1px solid var(--card-shadow-light); /* Remplace #d0d7de */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .serviceCard h2 {
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
-    color: #222;
+    color: var(--primary); /* Remplace #1a2cff */
+}
+
+.serviceCard h2 {
+    color: var(--text-dark);
 }
 
 .serviceCard p {
-    color: #666;
+    color: var(--text-dark); /* Remplace #222 */
     font-size: 1rem;
 }
 
@@ -59,7 +65,7 @@
 
 .contactSection p {
     font-size: 1.2rem;
-    color: #444;
+    color: var(--text-dark); /* Remplace #222 */
     margin-bottom: 1rem;
 }
 
@@ -81,6 +87,7 @@
 @media (prefers-color-scheme: dark) {
   .services {
     background-color: var(--background-dark);
+    color: var(--text-light);
   }
   .serviceCard {
     background: var(--card-bg-light);
@@ -96,4 +103,20 @@
   .contactSection p {
     color: var(--text-medium);
   }
+}
+
+html[data-theme="light"] .services {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+html[data-theme="dark"] .services {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+html[data-theme="light"] .serviceCard h2 {
+  color: var(--text-dark);
+}
+html[data-theme="dark"] .serviceCard h2 {
+  color: var(--text-light);
 }

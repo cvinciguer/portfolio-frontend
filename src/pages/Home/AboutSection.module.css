@@ -16,7 +16,7 @@
     max-width: 800px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: var(--text-dark);
+    color: var(--text-dark); /* Remplace #181a1b */
 }
 
 .profilePic {

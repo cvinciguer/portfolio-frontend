@@ -1,7 +1,7 @@
 /* --- CONTACT SECTION --- */
 .contactSection {
-    background: linear-gradient(-45deg, #1d098d, #9d006e);
-    color: var(--text-light);
+    background: var(--background-light);
+    color: var(--text-dark);
     text-align: center;
     padding: 60px 20px;
 }
@@ -9,10 +9,15 @@
 .contactSection p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: var(--text-dark);
 }
 
 @media (prefers-color-scheme: dark) {
   .contactSection {
-    color: var(--text-dark);
+    background: var(--background-dark);
+    color: var(--text-light);
+  }
+  .contactSection p {
+    color: var(--text-light);
   }
 }

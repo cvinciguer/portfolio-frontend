@@ -10,10 +10,10 @@
 .input, .textarea {
   padding: 10px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid var(--card-shadow-light); /* Remplace #d0d7de */
   font-size: 1rem;
-  background: var(--card-bg-light);
-  color: var(--text-dark);
+  background: var(--card-bg-light); /* Remplace #fff */
+  color: var(--text-dark); /* Remplace #181a1b */
   transition: background 0.3s, color 0.3s;
 }
 

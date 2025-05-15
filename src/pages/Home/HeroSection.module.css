@@ -1,9 +1,25 @@
 /* --- HEADER AVEC EFFET PARALLAXE --- */
 .hero {
+    position: relative;
     background: url('/src/assets/images/header-bg.jpg') center/cover no-repeat fixed;
     color: var(--text-light);
     text-align: center;
     padding: 100px 20px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 26, 27, 0.60); /* overlay foncé pour garantir contraste */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.heroText {
+    position: relative;
+    z-index: 1;
 }
 
 .heroText h1 {
@@ -35,9 +51,26 @@
     transform: scale(1.05);
 }
 
+.experience {
+    position: relative;
+    background: var(--background-light);
+    color: var(--text-dark);
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.experience::before {
+    display: none;
+}
+
+.experienceContent {
+    position: relative;
+    z-index: 1;
+}
+
 @media (prefers-color-scheme: dark) {
   .hero {
-    color: var(--text-dark);
+    /* Pas de dégradé ni overlay */
   }
   .ctaButton {
     background: var(--card-bg-light);
@@ -46,5 +79,34 @@
   .ctaButton:hover {
     background: var(--button-bg);
     color: var(--primary-dark);
+  }
+  .experience {
+    background: url('/src/assets/images/experience-bg.jpg') center/cover no-repeat fixed;
+    color: var(--text-light);
+    /* Pas de dégradé ni overlay */
+  }
+  .experience::before {
+    display: block;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 26, 27, 0.60);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hero {
+    color: var(--text-light); /* Force le texte en blanc même en thème clair */
+  }
+  .hero::before {
+    background: rgba(24, 26, 27, 0.60); /* overlay foncé aussi en clair */
+  }
+  .experience {
+    color: var(--text-light); /* Force le texte en blanc même en thème clair */
+  }
+  .experience::before {
+    background: rgba(24, 26, 27, 0.60); /* overlay foncé aussi en clair */
   }
 }
