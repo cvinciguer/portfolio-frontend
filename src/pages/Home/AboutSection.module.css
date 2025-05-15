@@ -20,10 +20,11 @@
 }
 
 .profilePic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--primary); /* Remplace #1a2cff */
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* Remplit le conteneur en gardant le ratio */
 }
 
 @media (prefers-color-scheme: dark) {
