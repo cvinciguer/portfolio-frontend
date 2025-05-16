@@ -9,7 +9,7 @@ export const SkillsSection: React.FC = () => {
 
   return (
     <section className={styles.skills + " fade-in"}>
-      <h2>{t("skillsTitle") || "Compétences"}</h2>
+      <h2 className={styles.skillsTitle}>{t("skillsTitle") || "Compétences"}</h2>
       <div className={styles.skillsGrid}>
         {skills.map((skill, index) => (
           <div key={index} className={styles.skillCard}>

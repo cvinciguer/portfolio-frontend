@@ -11,7 +11,7 @@ export const AboutSection: React.FC = () => {
       <div className={styles.aboutContent}>
         <img src={avatar} alt="Clément" className={styles.profilePic} />
         <div className={styles.aboutText}>
-          <h2>{t("aboutTitle") || "À propos"}</h2>
+          <h2 className={styles.aboutTitle}>{t("aboutTitle") || "À propos"}</h2>
           <p>{t("about")}</p>
         </div>
       </div>

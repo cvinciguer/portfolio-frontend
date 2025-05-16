@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   background: var(--background-light-secondary);
   transition: background 0.3s;
+  overflow-x: hidden;
 }
 
 #root, .App {
@@ -12,6 +13,7 @@ html, body {
   min-height: 100vh; /* min-height pour s'assurer que tout prend l'écran */
   background: var(--background-light-secondary);
   transition: background 0.3s;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -19,7 +21,7 @@ html, body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem; /* Supprime le padding-top ici */
+  padding: 0 2rem;
 }
 
 .spacer {

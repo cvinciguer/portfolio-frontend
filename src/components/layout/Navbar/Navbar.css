@@ -65,23 +65,58 @@ nav .menu span {
   margin-left: 8px;
   border-radius: 20px;
   padding: 6px 16px;
-  background: #222;
-  color: #fff;
-  border: 1px solid #444;
+  background: var(--background-light-secondary);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary);
   font-weight: 500;
   font-size: 1rem;
   outline: none;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: border 0.2s;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.08);
+  transition: border 0.2s, background 0.2s, color 0.2s;
 }
 
-.navbar-lang-select:focus {
-  border: 1.5px solid #888;
-}
-
+.navbar-lang-select:focus,
 .navbar-lang-select:active {
-  border: 1.5px solid #888;
+  border: 1.5px solid var(--primary-dark);
+  background: var(--button-bg-light);
+  color: var(--primary-dark);
+}
+
+.navbar-lang-select option {
+  background: #fff;
+  color: #181a1b;
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  .navbar-lang-select {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+  }
+  .navbar-lang-select:focus,
+  .navbar-lang-select:active {
+    border: 1.5px solid #888;
+    background: #232336;
+    color: #fff;
+  }
+  .navbar-lang-select option {
+    background: #232336;
+    color: #fff;
+  }
+}
+
+/* Forçage explicite si data-theme est utilisé */
+html[data-theme="light"] .navbar-lang-select {
+  background: var(--background-light-secondary);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary);
+}
+html[data-theme="dark"] .navbar-lang-select {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
 }
 
 .navbar-lang-flag {

@@ -4,6 +4,8 @@
     color: var(--text-dark);
     text-align: center;
     padding: 60px 20px;
+    border-radius: var(--border-radius);
+
 }
 
 .contactSection p {
@@ -14,20 +16,21 @@
 
 .contactSection h2 {
     font-size: 2.2rem;
-    font-weight: bold;
-    color: var(--primary-contrast, var(--primary));
-    margin-bottom: 1.2rem;
-    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    position: relative;
+    text-align: center;
     text-shadow: 0 2px 8px rgba(0,114,177,0.10);
+    position: relative;
 }
 .contactSection h2::after {
     content: "";
     display: block;
-    margin: 16px auto 0 auto;
-    width: 70px;
-    height: 5px;
+    margin: 18px auto 0 auto;
+    width: 80px;
+    height: 6px;
     border-radius: 3px;
     background: linear-gradient(90deg, var(--primary), var(--primary-dark, #0056b3));
     opacity: 0.85;

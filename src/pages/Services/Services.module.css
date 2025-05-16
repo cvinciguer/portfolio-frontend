@@ -54,6 +54,23 @@
     border: none;
     transition: transform 0.25s, box-shadow 0.25s;
     outline: none;
+    cursor: default;
+    will-change: transform;
+}
+
+.serviceCard.fade-in-up {
+    animation: fadeInUp 0.8s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .serviceCard h2 {
@@ -68,9 +85,11 @@
     font-size: 1rem;
 }
 
-.serviceCard:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.10);
+.serviceCard:hover, .serviceCard:focus {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(56, 189, 248, 0.13), 0 2px 8px rgba(30, 64, 175, 0.08);
+    cursor: pointer;
+    z-index: 1;
 }
 
 .serviceCard:focus-within, .serviceCard:focus {
@@ -116,6 +135,7 @@
     color: var(--text-light);
     box-shadow: var(--card-shadow-dark);
     border: 1px solid var(--card-bg-dark);
+    border-radius: var(--border-radius);
   }
   .serviceCard h2 {
     color: var(--text-light);

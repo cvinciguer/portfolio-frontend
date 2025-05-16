@@ -1,6 +1,6 @@
 /* --- À PROPOS --- */
 .aboutSection {
-    background: var(--card-bg-light);
+    background: var(--background-light-secondary);
     padding: 70px 30px;
     text-align: center;
     border-radius: var(--border-radius);
@@ -25,6 +25,14 @@
     text-align: left;
 }
 
+.aboutText p {
+    color: #23272f; /* Couleur plus foncée pour le texte */
+    font-size: 1.15rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+
 .profilePic {
     width: 180px;
     height: 180px;
@@ -41,6 +49,28 @@
     transform: scale(1.04);
 }
 
+.aboutTitle {
+    color: var(--primary-dark);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 0 2px 8px rgba(0,114,177,0.10);
+    position: relative;
+}
+.aboutTitle::after {
+    content: "";
+    display: block;
+    margin: 18px 0 0 0;
+    width: 80px;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark, #0056b3));
+    opacity: 0.85;
+}
+
 @media (max-width: 900px) {
   .aboutContent {
     flex-direction: column;
@@ -53,9 +83,35 @@
 
 @media (prefers-color-scheme: dark) {
   .aboutSection {
-    background: var(--card-bg-light);
+    background: #181a1b;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.32);
+    border: 1.5px solid #232336;
   }
   .aboutText {
-    color: var(--text-medium);
+    color: #e5e7eb;
+  }
+  .aboutText p {
+    color: #f3f4f6;
+    text-shadow: none;
+  }
+  .aboutTitle {
+    color: var(--accent);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .aboutSection {
+    background: #fff;
+    box-shadow: 0 4px 32px rgba(30, 64, 175, 0.08);
+    border: 1.5px solid #e5e7eb;
+  }
+  .aboutText {
+    color: #181a1b;
+  }
+  .aboutText p {
+    color: #23272f;
+  }
+  .aboutTitle {
+    color: var(--primary-dark);
   }
 }
