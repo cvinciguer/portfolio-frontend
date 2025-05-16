@@ -12,6 +12,27 @@
     color: var(--text-dark);
 }
 
+.contactSection h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-contrast, var(--primary));
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0 2px 8px rgba(0,114,177,0.10);
+}
+.contactSection h2::after {
+    content: "";
+    display: block;
+    margin: 16px auto 0 auto;
+    width: 70px;
+    height: 5px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark, #0056b3));
+    opacity: 0.85;
+}
+
 @media (prefers-color-scheme: dark) {
   .contactSection {
     background: var(--background-dark);

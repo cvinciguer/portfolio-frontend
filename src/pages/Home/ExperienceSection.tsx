@@ -13,7 +13,11 @@ export const ExperienceSection: React.FC = () => {
       <h2 className={styles.title}>{t("latestExperiencesTitle") || "Dernières expériences"}</h2>
       <div className={styles.cards}>
         {latestExperiences.map((exp, index) => (
-          <div key={index} className={styles.card}>
+          <div
+            key={index}
+            className={`${styles.card} fade-in-up delay-${index + 1}`}
+            tabIndex={0}
+          >
             <h3>{exp.title}</h3>
             <p>{exp.date}</p>
           </div>

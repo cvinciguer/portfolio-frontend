@@ -3,28 +3,45 @@
     background: var(--card-bg-light);
     padding: 60px 20px;
     text-align: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow-light);
+    margin-bottom: 2rem;
 }
 
 .aboutContent {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .aboutText {
-    max-width: 800px;
+    max-width: 700px;
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--text-dark); /* Remplace #181a1b */
+    line-height: 1.7;
+    color: var(--text-dark);
+    text-align: left;
 }
 
 .profilePic {
-    width: 200px;
-    height: 200px;
-    border: 5px solid var(--primary); /* Remplace #1a2cff */
+    width: 180px;
+    height: 180px;
+    border: 4px solid var(--primary);
     border-radius: 50%;
-    object-fit: cover; /* Remplit le conteneur en gardant le ratio */
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(30, 64, 175, 0.10);
+    background: var(--background-light);
+}
+
+@media (max-width: 900px) {
+  .aboutContent {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .aboutText {
+    text-align: center;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

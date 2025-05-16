@@ -3,17 +3,31 @@
   padding: 100px 20px;
   padding-top: 10px;
   text-align: center;
-  background: linear-gradient(to bottom, var(--background-light), #f5faff);
+  background: linear-gradient(to bottom, var(--background-light), var(--background-section));
   position: relative;
   color: var(--text-dark);
 }
 
 /* Titre */
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   font-weight: bold;
-  color: var(--primary);
+  color: var(--primary-contrast);
   margin-bottom: 40px;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,114,177,0.10);
+}
+.sectionTitle::after {
+  content: "";
+  display: block;
+  margin: 18px auto 0 auto;
+  width: 80px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-accent));
+  opacity: 0.85;
 }
 
 /* Timeline */
@@ -28,8 +42,8 @@
   position: absolute;
   left: 50%;
   width: 4px;
-  background: linear-gradient(180deg, var(--primary), #00aaff);
-  box-shadow: 0px 0px 15px rgba(0, 114, 177, 0.12);
+  background: linear-gradient(180deg, var(--primary), var(--primary-accent));
+  box-shadow: 0px 0px 15px var(--timeline-shadow);
   top: 0;
   bottom: 0;
   transform: translateX(-50%);
@@ -45,7 +59,7 @@
   border-radius: 50%;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(0, 114, 177, 0.10);
+  box-shadow: 0 0 10px var(--timeline-shadow);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -88,19 +102,24 @@
   max-width: 350px;
   transition: all 0.3s ease-in-out;
   color: var(--text-dark);
-  border: 1px solid #d0d7de;
+  border: 1px solid var(--card-border);
 }
 
 .experienceCard:hover {
-  border-left: 5px solid #00aaff;
+  border-left: 5px solid var(--primary-accent);
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 114, 177, 0.10);
+  box-shadow: 0 8px 20px var(--card-hover-shadow);
+}
+
+.experienceCard:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* Icône */
 .experienceIcon {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--primary-contrast);
 }
 
 /* Contenu */
@@ -111,7 +130,7 @@
 .experienceContent h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #1a2cff;
+  color: var(--secondary-contrast);
   margin-bottom: 5px;
 }
 
@@ -146,31 +165,71 @@
   }
 }
 
+@media (max-width: 600px) {
+  .experienceCard {
+    padding: 12px;
+    max-width: 95vw;
+  }
+}
+
 /* Mode sombre */
 @media (prefers-color-scheme: dark) {
   .experienceSection {
-    background: linear-gradient(to bottom, var(--background-dark), #232336);
+    background: linear-gradient(to bottom, var(--background-dark), var(--background-section-dark));
     color: var(--text-light);
   }
   .experienceCard {
-    background: var(--card-bg-light);
-    color: var(--text-dark);
+    background: var(--card-bg-dark);
+    color: var(--text-light);
     box-shadow: var(--card-shadow-dark);
+    border: 1px solid var(--card-border-dark);
   }
   .company {
-    color: var(--text-medium);
+    color: var(--text-medium-dark);
   }
   .experienceContent h4 {
-    color: var(--text-dark);
+    color: var(--text-light);
+  }
+  .experienceIcon {
+    color: var(--primary-contrast-dark);
+  }
+  .experienceContent h3 {
+    color: var(--secondary-contrast-dark);
   }
 }
 
 /* Forçage explicite si data-theme est utilisé */
 html[data-theme="light"] .experienceSection {
-  background: linear-gradient(to bottom, var(--background-light), #f5faff);
+  background: linear-gradient(to bottom, var(--background-light), var(--background-section));
   color: var(--text-dark);
 }
 html[data-theme="dark"] .experienceSection {
-  background: linear-gradient(to bottom, var(--background-dark), #232336);
+  background: linear-gradient(to bottom, var(--background-dark), var(--background-section-dark));
   color: var(--text-light);
+}
+
+/* Variables de thème */
+:root {
+  --background-light: #f5faff;
+  --background-section: #eaf2fb;
+  --background-dark: #181a23;
+  --background-section-dark: #232336;
+  --primary: #0072b1;
+  --primary-accent: #00aaff;
+  --primary-contrast: #005080;
+  --primary-contrast-dark: #4fc3f7;
+  --secondary-contrast: #1a2cff;
+  --secondary-contrast-dark: #82b1ff;
+  --text-dark: #1a1a1a;
+  --text-light: #f5faff;
+  --text-medium: #4a4a4a;
+  --text-medium-dark: #b0b8c1;
+  --card-bg-light: #fff;
+  --card-bg-dark: #232336;
+  --card-shadow-light: 0 2px 8px rgba(0, 114, 177, 0.08);
+  --card-shadow-dark: 0 2px 8px rgba(0, 114, 177, 0.18);
+  --card-hover-shadow: rgba(0, 114, 177, 0.15);
+  --card-border: #d0d7de;
+  --card-border-dark: #2c2f3a;
+  --timeline-shadow: rgba(0, 114, 177, 0.12);
 }

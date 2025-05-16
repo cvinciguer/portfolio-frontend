@@ -20,6 +20,7 @@
 .heroText {
     position: relative;
     z-index: 1;
+    animation: fadeIn 1.2s ease-in;
 }
 
 .heroText h1 {
@@ -71,6 +72,20 @@
 .experienceContent {
     position: relative;
     z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 60px 10px;
+  }
+  .heroText h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

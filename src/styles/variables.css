@@ -1,35 +1,51 @@
 :root {
-  --primary: #007bff;
-  --primary-dark: #0056b3;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --accent: #38bdf8;
 
-  --background-light: #fafdff;
-  --background-dark: #242424;
+  --background-light: #f7fafc;
+  --background-dark: #181a1b;
 
   --text-dark: #181a1b;
-  --text-medium: #444c56;
+  --text-medium: #4b5563;
   --text-light: #fff;
 
-  --link: #2a4cff;
-  --link-hover: #1a2cff;
-  --link-hover-light: #3a5cff;
+  --link: #2563eb;
+  --link-hover: #1e40af;
+  --link-hover-light: #38bdf8;
 
-  --button-bg: #e9eef6;
-  --button-bg-light: #f5faff;
+  --button-bg: #e5e7eb;
+  --button-bg-light: #f1f5f9;
 
-  --card-bg-light: #f8fbff;
+  --card-bg-light: #fff;
   --card-bg-dark: #232336;
 
-  --card-shadow-light: 0 2px 8px rgba(0,0,0,0.04);
-  --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.25);
+  --card-shadow-light: 0 2px 8px rgba(30, 64, 175, 0.06);
+  --card-shadow-dark: 0 4px 16px rgba(0,0,0,0.22);
 
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --border-radius: 12px;
+  --spacing: 1.5rem;
+
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   --hero-text-on-dark: #fff;
+
+  --border-width: 1px;
+  --border-color: #e5e7eb;
+  --transition: 0.2s cubic-bezier(.4,0,.2,1);
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.7rem;
+  --secondary: #64748b;
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #f59e42;
 }
 
 /* Thème sombre automatique (préférence système) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-light: #242424;
+    --background-light: #181a1b;
     --background-dark: #181824;
 
     --text-dark: #f8f9fa;
@@ -46,37 +62,37 @@
     --card-bg-light: #232336;
     --card-bg-dark: #181824;
 
-    --card-shadow-light: 0 4px 10px rgba(0,0,0,0.25);
-    --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.45);
+    --card-shadow-light: 0 4px 16px rgba(0,0,0,0.22);
+    --card-shadow-dark: 0 4px 16px rgba(0,0,0,0.45);
   }
 }
 
 /* Thème clair forcé */
 html[data-theme="light"] {
-  --background-light: #fafdff;
-  --background-dark: #242424;
+  --background-light: #f7fafc;
+  --background-dark: #181a1b;
 
   --text-dark: #181a1b;
-  --text-medium: #444c56;
+  --text-medium: #4b5563;
   --text-light: #fff;
 
-  --link: #2a4cff;
-  --link-hover: #1a2cff;
-  --link-hover-light: #3a5cff;
+  --link: #2563eb;
+  --link-hover: #1e40af;
+  --link-hover-light: #38bdf8;
 
-  --button-bg: #e9eef6;
-  --button-bg-light: #f5faff;
+  --button-bg: #e5e7eb;
+  --button-bg-light: #f1f5f9;
 
-  --card-bg-light: #f8fbff;
+  --card-bg-light: #fff;
   --card-bg-dark: #232336;
 
-  --card-shadow-light: 0 2px 8px rgba(0,0,0,0.04);
-  --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.25);
+  --card-shadow-light: 0 2px 8px rgba(30, 64, 175, 0.06);
+  --card-shadow-dark: 0 4px 16px rgba(0,0,0,0.22);
 }
 
 /* Thème sombre forcé */
 html[data-theme="dark"] {
-  --background-light: #242424;
+  --background-light: #181a1b;
   --background-dark: #181824;
 
   --text-dark: #f8f9fa;
@@ -93,6 +109,6 @@ html[data-theme="dark"] {
   --card-bg-light: #232336;
   --card-bg-dark: #181824;
 
-  --card-shadow-light: 0 4px 10px rgba(0,0,0,0.25);
-  --card-shadow-dark: 0 4px 10px rgba(0,0,0,0.45);
+  --card-shadow-light: 0 4px 16px rgba(0,0,0,0.22);
+  --card-shadow-dark: 0 4px 16px rgba(0,0,0,0.45);
 }

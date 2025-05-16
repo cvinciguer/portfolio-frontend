@@ -2,14 +2,45 @@ html, body {
   height: 100%; /* Assure que la page prend toute la hauteur */
   margin: 0;
   padding: 0;
+  background: var(--background-light);
 }
 
 #root, .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* min-height pour s'assurer que tout prend l'écran */
+  background: var(--background-light);
 }
 
 .main-container {
   flex: 1; /* Prend tout l'espace restant pour pousser le footer */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.spacer {
+  height: 3rem;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Mode sombre explicite */
+@media (prefers-color-scheme: dark) {
+  html, body, #root, .App {
+    background: var(--background-dark);
+  }
+}
+
+/* Forçage explicite si data-theme est utilisé */
+html[data-theme="light"], html[data-theme="light"] body, html[data-theme="light"] #root, html[data-theme="light"] .App {
+  background: var(--background-light) !important;
+}
+html[data-theme="dark"], html[data-theme="dark"] body, html[data-theme="dark"] #root, html[data-theme="dark"] .App {
+  background: var(--background-dark) !important;
 }

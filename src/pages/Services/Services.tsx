@@ -22,7 +22,11 @@ export const Services: React.FC = () => {
 
                 <div className={styles.servicesGrid}>
                     {services.map((service, idx) => (
-                        <div className={styles.serviceCard} key={idx}>
+                        <div
+                            className={`${styles.serviceCard} fade-in-up delay-${idx % 3 + 1}`}
+                            tabIndex={0}
+                            key={idx}
+                        >
                             <h2>{service.title}</h2>
                             <p>{service.description}</p>
                         </div>

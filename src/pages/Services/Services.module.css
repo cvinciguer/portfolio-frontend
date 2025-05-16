@@ -3,60 +3,77 @@
     background-color: var(--background-light);
     color: var(--text-dark);
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
 }
 
 .servicesTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0,114,177,0.10);
+}
+.servicesTitle::after {
+    content: "";
+    display: block;
+    margin: 18px auto 0 auto;
+    width: 80px;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark, #0056b3));
+    opacity: 0.85;
 }
 
 .servicesSubtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-medium);
     margin-bottom: 2.5rem;
 }
 
 .servicesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
 .serviceCard {
     background: var(--card-bg-light);
     color: var(--text-dark);
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius);
     box-shadow: var(--card-shadow-light);
-    border: 1px solid var(--card-shadow-light); /* Remplace #d0d7de */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    outline: none;
 }
 
 .serviceCard h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-    color: var(--primary); /* Remplace #1a2cff */
-}
-
-.serviceCard h2 {
-    color: var(--text-dark);
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    color: var(--primary-dark);
+    font-weight: 600;
 }
 
 .serviceCard p {
-    color: var(--text-dark); /* Remplace #222 */
+    color: var(--text-medium);
     font-size: 1rem;
 }
 
 .serviceCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(30, 64, 175, 0.10);
+}
+
+.serviceCard:focus-within {
+    box-shadow: 0 0 0 2px var(--accent);
 }
 
 .contactSection {
@@ -64,24 +81,28 @@
 }
 
 .contactSection p {
-    font-size: 1.2rem;
-    color: var(--text-dark); /* Remplace #222 */
+    font-size: 1.1rem;
+    color: var(--text-dark);
     margin-bottom: 1rem;
 }
 
 .ctaButton {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 12px 28px;
     background-color: var(--primary);
-    color: white;
+    color: var(--text-light);
     font-size: 1.1rem;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     text-decoration: none;
-    transition: background 0.3s ease;
+    border: none;
+    transition: background 0.2s;
 }
 
-.ctaButton:hover {
+.ctaButton:hover, .ctaButton:focus {
     background-color: var(--primary-dark);
+    color: var(--text-light);
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,18 +111,27 @@
     color: var(--text-light);
   }
   .serviceCard {
-    background: var(--card-bg-light);
-    color: var(--text-dark);
+    background: var(--card-bg-dark);
+    color: var(--text-light);
     box-shadow: var(--card-shadow-dark);
+    border: 1px solid var(--card-bg-dark);
   }
   .serviceCard h2 {
     color: var(--text-light);
   }
   .serviceCard p {
-    color: var(--text-medium);
+    color: var(--text-light);
   }
   .contactSection p {
-    color: var(--text-medium);
+    color: var(--text-light);
+  }
+  .ctaButton {
+    background-color: var(--primary);
+    color: var(--text-light);
+  }
+  .ctaButton:hover {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
   }
 }
 
@@ -115,7 +145,7 @@ html[data-theme="dark"] .services {
 }
 
 html[data-theme="light"] .serviceCard h2 {
-  color: var(--text-dark);
+  color: var(--primary-contrast, var(--primary));
 }
 html[data-theme="dark"] .serviceCard h2 {
   color: var(--text-light);

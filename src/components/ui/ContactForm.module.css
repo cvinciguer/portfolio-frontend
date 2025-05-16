@@ -8,13 +8,20 @@
 }
 
 .input, .textarea {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: var(--border-radius);
   border: 1px solid var(--card-shadow-light); /* Remplace #d0d7de */
   font-size: 1rem;
   background: var(--card-bg-light); /* Remplace #fff */
   color: var(--text-dark); /* Remplace #181a1b */
-  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.input:focus, .textarea:focus {
+  border: 1.5px solid var(--primary);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .button {
@@ -22,15 +29,32 @@
   background: var(--primary);
   color: var(--text-light);
   border: none;
-  border-radius: 5px;
-  padding: 10px;
-  transition: background 0.3s, color 0.3s, transform 0.3s;
+  border-radius: var(--border-radius);
+  padding: 12px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
-.button:hover {
+.button:hover, .button:focus {
   background: var(--primary-dark);
   color: var(--text-light);
-  transform: scale(1.05);
+  transform: scale(1.04);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.successMessage {
+  color: var(--success);
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.errorMessage {
+  color: var(--error);
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
