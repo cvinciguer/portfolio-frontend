@@ -2,22 +2,24 @@ html, body {
   height: 100%; /* Assure que la page prend toute la hauteur */
   margin: 0;
   padding: 0;
-  background: var(--background-light);
+  background: var(--background-light-secondary);
+  transition: background 0.3s;
 }
 
 #root, .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* min-height pour s'assurer que tout prend l'écran */
-  background: var(--background-light);
+  background: var(--background-light-secondary);
+  transition: background 0.3s;
 }
 
 .main-container {
   flex: 1; /* Prend tout l'espace restant pour pousser le footer */
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem; /* Supprime le padding-top ici */
 }
 
 .spacer {
@@ -30,16 +32,28 @@ html, body {
   margin: 0 auto;
 }
 
+/* Ajout d'une ombre douce à la navbar */
+.navbar {
+  box-shadow: 0 2px 16px rgba(30, 64, 175, 0.07);
+  background: #fff;
+  transition: box-shadow 0.2s, background 0.3s;
+}
+
 /* Mode sombre explicite */
 @media (prefers-color-scheme: dark) {
   html, body, #root, .App {
     background: var(--background-dark);
+    transition: background 0.3s;
+  }
+  .navbar {
+    background: var(--background-dark);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
   }
 }
 
 /* Forçage explicite si data-theme est utilisé */
 html[data-theme="light"], html[data-theme="light"] body, html[data-theme="light"] #root, html[data-theme="light"] .App {
-  background: var(--background-light) !important;
+  background: var(--background-light-secondary) !important;
 }
 html[data-theme="dark"], html[data-theme="dark"] body, html[data-theme="dark"] #root, html[data-theme="dark"] .App {
   background: var(--background-dark) !important;

@@ -2,6 +2,7 @@
   text-align: center;
   padding: 60px 20px;
   background: var(--background-light); /* Fond clair uniforme */
+  margin-bottom: 3.5rem;
 }
 
 .title {
@@ -16,8 +17,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 40px; /* Augmente l'espacement entre les cards */
+  margin-top: 40px; /* Plus d'espace au-dessus */
 }
 
 .card {
@@ -29,7 +30,7 @@
   width: 90%;
   max-width: 320px;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s, box-shadow 0.25s;
   cursor: pointer;
   display: flex;
   flex-direction: column;

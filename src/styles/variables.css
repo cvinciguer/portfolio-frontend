@@ -3,7 +3,8 @@
   --primary-dark: #1e40af;
   --accent: #38bdf8;
 
-  --background-light: #f7fafc;
+  --background-light: #fff;
+  --background-light-secondary: #f3f4f6;
   --background-dark: #181a1b;
 
   --text-dark: #181a1b;
@@ -46,6 +47,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-light: #181a1b;
+    --background-light-secondary: #232336;
     --background-dark: #181824;
 
     --text-dark: #f8f9fa;
@@ -69,7 +71,8 @@
 
 /* Thème clair forcé */
 html[data-theme="light"] {
-  --background-light: #f7fafc;
+  --background-light: #fff;
+  --background-light-secondary: #f3f4f6;
   --background-dark: #181a1b;
 
   --text-dark: #181a1b;
@@ -93,6 +96,7 @@ html[data-theme="light"] {
 /* Thème sombre forcé */
 html[data-theme="dark"] {
   --background-light: #181a1b;
+  --background-light-secondary: #232336;
   --background-dark: #181824;
 
   --text-dark: #f8f9fa;

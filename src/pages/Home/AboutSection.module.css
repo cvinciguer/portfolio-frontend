@@ -1,11 +1,12 @@
 /* --- À PROPOS --- */
 .aboutSection {
     background: var(--card-bg-light);
-    padding: 60px 20px;
+    padding: 70px 30px;
     text-align: center;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow-light);
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
+    margin-top: 4rem; /* Augmente l'espace au-dessus de la section à propos */
 }
 
 .aboutContent {
@@ -18,7 +19,7 @@
 
 .aboutText {
     max-width: 700px;
-    font-size: 1.1rem;
+    font-size: 1.18rem;
     line-height: 1.7;
     color: var(--text-dark);
     text-align: left;
@@ -32,6 +33,12 @@
     object-fit: cover;
     box-shadow: 0 4px 16px rgba(30, 64, 175, 0.10);
     background: var(--background-light);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.profilePic:hover {
+    box-shadow: 0 8px 32px rgba(56, 189, 248, 0.18), 0 2px 16px rgba(30, 64, 175, 0.10);
+    transform: scale(1.04);
 }
 
 @media (max-width: 900px) {

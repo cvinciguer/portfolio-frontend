@@ -4,15 +4,18 @@
     background: url('/src/assets/images/header-bg.jpg') center/cover no-repeat fixed;
     color: var(--text-light);
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 0; /* Enlève le padding latéral */
     overflow: hidden;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(24, 26, 27, 0.60); /* overlay foncé pour garantir contraste */
+    background: rgba(24, 26, 27, 0.45); /* overlay plus subtil */
     z-index: 0;
     pointer-events: none;
 }
@@ -44,12 +47,14 @@
     text-decoration: none;
     transition: 0.3s;
     cursor: pointer;
+    box-shadow: 0 2px 8px rgba(30, 64, 175, 0.08);
 }
 
 .ctaButton:hover {
     background: var(--button-bg-light);
     color: var(--primary-dark);
-    transform: scale(1.05);
+    transform: scale(1.07) translateY(-2px);
+    box-shadow: 0 6px 24px rgba(30, 64, 175, 0.13);
 }
 
 .experience {
@@ -81,10 +86,10 @@
 
 @media (max-width: 700px) {
   .hero {
-    padding: 60px 10px;
+    padding: 60px 0; /* Enlève aussi le padding latéral sur mobile */
   }
   .heroText h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -108,7 +113,7 @@
     color: var(--text-light); /* Force le texte en blanc même en thème clair */
   }
   .hero::before {
-    background: rgba(24, 26, 27, 0.60); /* overlay foncé aussi en clair */
+    background: rgba(24, 26, 27, 0.45); /* overlay plus subtil */
   }
   .experience {
     color: var(--text-light); /* Force le texte en blanc même en thème clair */
